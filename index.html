@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous" />
+		<link
+			rel="stylesheet"
+			href="./css/style.css" />
+	</head>
+
+	<body class="">
+		<header class="navs w-100 bg-body">
+			<nav
+				class="navbar container bg-body navbar-fixed navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+					<a
+						class="navbar-brand fw-bold me-9 d-flex align-items-center justify-content-center"
+						href="#">
+						<i class="fas fa-utensils fs-35 me-3"></i>
+						<p class="fs-28 fw-bolder mb-0 mt-5px">Foody</p>
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div
+						class="collapse bg-body navbar-collapse justify-content-between"
+						id="navbarSupportedContent">
+						<div class="search-form mt-lg-6">
+							<form
+								action="#"
+								class="form w-100">
+								<input
+									type="text"
+									class="form-control searchInput w-100 h-40px"
+									placeholder="search food" />
+							</form>
+						</div>
+						<button
+							class="btn p-0 center my-lg-6 bg-dark openOrdersbtn w-50px h-50px rounded-1"
+							data-bs-toggle="modal"
+							data-bs-target="#cartModal">
+							<i class="fas fa-shopping-cart fs-20"></i>
+						</button>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="container main-body px-6">
+			<div
+				class="food-menu-options btn-overflow scrollbar mb-9 d-non d-flex align-items-center">
+				<button
+					data-cetagroize="all"
+					type="button"
+					class="btn cetagroize text-nowrap bg-secondary bg-dark d-flex align-items-center me-5 rounded-1 h-55px px-20px">
+					<i class="fas fa-utensils fs-25 me-4"></i>
+					<p class="fs-16">All</p></button
+				><button
+					type="button"
+					data-cetagroize="Burger"
+					class="btn cetagroize text-nowrap bg-secondary d-flex align-items-center me-5 rounded-1 h-55px px-20px">
+					<i class="fas fa-hamburger fs-25 me-4"></i>
+					<p class="fs-16">Burger</p></button
+				><button
+					type="button"
+					data-cetagroize="Pizza"
+					class="btn cetagroize text-nowrap bg-secondary d-flex align-items-center me-5 rounded-1 h-55px px-20px">
+					<i class="fas fa-pizza-slice fs-25 me-4"></i>
+					<p class="fs-16">Pizza</p></button
+				><button
+					type="button"
+					data-cetagroize="ice Cream"
+					class="btn cetagroize text-nowrap bg-secondary d-flex align-items-center me-5 rounded-1 h-55px px-20px">
+					<i class="fas fa-ice-cream fs-25 me-4"></i>
+					<p class="fs-16">ice Cream</p></button
+				><button
+					type="button"
+					data-cetagroize="Fish"
+					class="btn cetagroize text-nowrap bg-secondary d-flex align-items-center me-5 rounded-1 h-55px px-20px">
+					<i class="fas fa-fish fs-25 me-4"></i>
+					<p class="fs-16">Fish</p>
+				</button>
+			</div>
+			<div class="search-info mb-4 d-none between-center">
+				<h3 class="fw-bold">Search Result</h3>
+				<select
+					class="form-select filterFoodItems bg-dark"
+					style="width: 120px"
+					aria-label="Default select example">
+					<option
+						class="d-none"
+						selected>
+						Filter
+					</option>
+					<option value="topRated">Top rated</option>
+					<option value="topPrice">Top price</option>
+					<option value="lowestPrice">Lowest price</option>
+				</select>
+			</div>
+			<div class="gellary"></div>
+		</div>
+		<div
+			class="modal fade"
+			id="itemModal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<div
+				class="modal-dialog my-0 modal-dialog-scrollable-full-height"
+				style="max-width: 630px">
+				<div class="modal-content border">
+					<div class="modal-header border-0">
+						<button
+							type="button"
+							class="btn"
+							data-bs-dismiss="modal"
+							aria-label="Close">
+							<i class="fas fa-arrow-left fs-25"></i></button
+						><button
+							class="btn bg-secondary addToBookarBtn py-11px">
+							<i class="fas fa-shopping-cart fs-20"></i>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div
+							class="card border-0"
+							style="background-color: transparent !important">
+							<img
+								src="./imgs/food/1.png"
+								class="modal-img card-img-top"
+								alt="..." />
+							<div class="card-body">
+								<div class="between-center mt-3 mb-1">
+									<h5 class="card-title fs-26 modal-title">
+										Avocado pato pasta
+									</h5>
+									<h3 class="fw-bolder modal-price">$4</h3>
+								</div>
+								<div>
+									<ul class="nav">
+										<li
+											class="nav-item fs-16 p-0 nav-link text-secondary center modal-shop">
+											gloria jeans
+										</li>
+									</ul>
+								</div>
+								<div class="mt-5 side-center">
+									<button
+										style="
+											background-color: #feccb5;
+											color: black;
+										"
+										type="button"
+										class="btn d-flex align-items-center me-5 rounded-1 h-55px px-20px">
+										<i class="far fa-clock fs-25 me-4"></i>
+										<p class="fs-16 modal-timing">
+											15mn
+										</p></button
+									><button
+										style="
+											background-color: #d6d8ff;
+											color: black;
+										"
+										type="button"
+										class="btn d-flex align-items-center me-5 rounded-1 h-55px px-20px">
+										<i class="fas fa-star fs-25 me-4"></i>
+										<p class="fs-16 modal-rating">
+											2.5
+										</p></button
+									><button
+										style="
+											background-color: #fbe5e7;
+											color: black;
+										"
+										type="button"
+										class="btn d-flex align-items-center me-5 rounded-1 h-55px px-20px">
+										<i class="fas fa-truck fs-25 me-4"></i>
+										<p class="fs-16 modal-delivery">free</p>
+									</button>
+								</div>
+								<div class="mt-8">
+									<h3 class="fw-bold mb-4">About</h3>
+									<p class="modal-about">
+										Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. Nihil, explicabo,
+										harum ipsam quas et, molestias tempore
+										iste amet doloribus eaque suscipit!
+										Sequi fugiat recusandae facilis quos
+										repellat provident ne ipsam quas et,
+										molestias doloribus eaque suscipit!
+										Sequi fugiat recusandae facilis quos
+										tempore iste amet doloribus eaque
+										suscipit! Sequi fugiat recusandae
+										facilis quos repellat provident nemo
+										aperiam?
+									</p>
+								</div>
+								<div class="mt-8">
+									<h3 class="fw-bold mb-2">Reviews</h3>
+									<div class="modal-comments"></div>
+								</div>
+								<div class="center">
+									<button
+										class="btn loadMoreCommentsBtn bg-dark btn-lg px-9">
+										Load More
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="modal fade"
+			id="cartModal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<div
+				class="modal-dialog modal-dialog-scrollable-full-height m-0 float-end"
+				style="width: 500px">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button
+							type="button"
+							class="btn"
+							data-bs-dismiss="modal"
+							aria-label="Close">
+							<i class="fas fa-arrow-left fs-25"></i>
+						</button>
+						<h3>My order</h3>
+						<p></p>
+					</div>
+					<div class="modal-body">
+						<ul class="list-group orders"></ul>
+					</div>
+					<div class="modal-footer between-center px-5">
+						<div class="side-center">
+							<h3 class="fw-bold me-2">Total Price</h3>
+							<h3 class="fw-bold totalPrice">$30</h3>
+						</div>
+						<button
+							type="button"
+							class="btn bg-dark btn-lg 15 px-7">
+							Check Out
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+			crossorigin="anonymous"></script>
+		<script
+			type="module"
+			src="./data/foodData.js"></script>
+		<script
+			type="module"
+			src="./app.js"></script>
+	</body>
+</html>
